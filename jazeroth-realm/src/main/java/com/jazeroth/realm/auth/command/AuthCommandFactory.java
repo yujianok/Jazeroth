@@ -2,7 +2,7 @@ package com.jazeroth.realm.auth.command;
 
 import org.springframework.stereotype.Component;
 
-import static com.jazeroth.realm.auth.command.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
+import static com.jazeroth.realm.auth.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
 
 
 /**

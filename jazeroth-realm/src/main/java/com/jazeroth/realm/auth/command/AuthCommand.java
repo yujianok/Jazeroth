@@ -18,5 +18,5 @@ public interface AuthCommand {
 
     public void setSize(short size);
 
-    AuthCommand deserialize(ByteBuf byteBuf);
+    AuthCommand read(ByteBuf byteBuf);
 }

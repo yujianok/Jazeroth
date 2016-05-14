@@ -1,7 +1,7 @@
 package com.jazeroth.realm.auth.handler;
 
 import com.jazeroth.realm.auth.command.LogonChallenge;
-import com.jazeroth.realm.auth.command.LogonChallengeResult;
+import com.jazeroth.realm.auth.result.LogonChallengeResult;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +12,8 @@ public class LogonChallengeHandler implements AuthCommandHandler<LogonChallenge,
 
     @Override
     public LogonChallengeResult handleAuthCommand(LogonChallenge authCommand) {
+
+
         return null;
     }
 }

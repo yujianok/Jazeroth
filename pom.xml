@@ -11,6 +11,7 @@
     <modules>
         <module>jazeroth-realm</module>
         <module>jazeroth-core</module>
+        <module>jazeroth-world</module>
     </modules>
 
     <properties>

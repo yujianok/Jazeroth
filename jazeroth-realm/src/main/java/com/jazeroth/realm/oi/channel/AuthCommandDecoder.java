@@ -43,7 +43,7 @@ public class AuthCommandDecoder extends ByteToMessageDecoder {
         }
 
         if (currentAuthCommand.getSize() <= byteBuf.readableBytes()) {
-            currentAuthCommand.deserialize(byteBuf);
+            currentAuthCommand.read(byteBuf);
             out.add(currentAuthCommand);
         }
     }

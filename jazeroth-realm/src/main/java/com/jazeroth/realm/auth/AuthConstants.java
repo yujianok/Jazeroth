@@ -1,4 +1,4 @@
-package com.jazeroth.realm.auth.command;
+package com.jazeroth.realm.auth;
 
 /**
  * Created by Jack on 2016/5/10.

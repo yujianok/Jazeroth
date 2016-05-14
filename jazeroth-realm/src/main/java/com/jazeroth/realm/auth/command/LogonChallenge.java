@@ -2,11 +2,8 @@ package com.jazeroth.realm.auth.command;
 
 import io.netty.buffer.ByteBuf;
 
-import java.nio.ByteBuffer;
-import java.nio.ByteOrder;
-
-import static com.jazeroth.realm.auth.command.AuthConstants.AUTH_CHALLENGE_HANDLER;
-import static com.jazeroth.realm.auth.command.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
+import static com.jazeroth.realm.auth.AuthConstants.AUTH_CHALLENGE_HANDLER;
+import static com.jazeroth.realm.auth.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
 
 /**
  * Created by Jack on 2016/5/8.
@@ -56,7 +53,7 @@ public class LogonChallenge implements AuthCommand {
     }
 
     @Override
-    public AuthCommand deserialize(ByteBuf byteBuf) {
+    public AuthCommand read(ByteBuf byteBuf) {
         byteBuf.readBytes(gamename);
         version1 = byteBuf.readByte();
         version2 = byteBuf.readByte();

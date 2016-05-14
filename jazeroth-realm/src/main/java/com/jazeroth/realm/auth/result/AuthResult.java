@@ -11,8 +11,6 @@ public interface AuthResult {
 
     byte errorCode();
 
-    ByteBuf serialize();
-
-
+    ByteBuf write(ByteBuf byteBuf);
 
 }
