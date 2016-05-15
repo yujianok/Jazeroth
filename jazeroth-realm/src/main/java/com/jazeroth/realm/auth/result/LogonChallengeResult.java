@@ -1,12 +1,10 @@
 package com.jazeroth.realm.auth.result;
 
+import com.jazeroth.realm.auth.AuthConstants;
 import io.netty.buffer.ByteBuf;
 
 import static com.jazeroth.realm.auth.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
 
-/**
- * Created by Jack on 2016/5/10.
- */
 public class LogonChallengeResult implements AuthResult {
 
     private final byte commandCode = AUTH_LOGON_CHALLENGE_CODE;
@@ -122,7 +120,20 @@ public class LogonChallengeResult implements AuthResult {
     }
 
     @Override
-    public ByteBuf write(ByteBuf byteBuf) {
-        return null;
+    public void write(ByteBuf byteBuf) {
+        byteBuf.writeByte(commandCode);
+        byteBuf.writeByte(unknownField1);
+        byteBuf.writeByte(errorCode);
+
+        if (errorCode == AuthConstants.WOW_SUCCESS) {
+            byteBuf.writeBytes(B);
+            byteBuf.writeByte(g_len);
+            byteBuf.writeByte(g);
+            byteBuf.writeByte(N_len);
+            byteBuf.writeBytes(N);
+            byteBuf.writeBytes(s);
+            byteBuf.writeBytes(unknownField2);
+            byteBuf.writeByte(unknownField3);
+        }
     }
 }

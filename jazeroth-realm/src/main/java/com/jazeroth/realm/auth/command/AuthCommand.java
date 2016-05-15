@@ -5,9 +5,6 @@ import io.netty.buffer.ByteBuf;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Jack on 2016/5/8.
- */
 public interface AuthCommand {
 
     byte commandCode();

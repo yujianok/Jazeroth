@@ -48,7 +48,8 @@ public class AuthenticationListener {
                     @Override
                     public void initChannel(SocketChannel ch) throws Exception {
                         ch.pipeline().addLast(handlerBeanLocator.getChannelHandler("authCommandDecoder"));
-                        ch.pipeline().addLast(handlerBeanLocator.getChannelHandler("authCommandHandler"));
+                        ch.pipeline().addLast(handlerBeanLocator.getChannelHandler("authCommandEncoder"));
+                        ch.pipeline().addLast(handlerBeanLocator.getChannelHandler("authCommandDispatcher"));
                     }
                 })
                 .option(ChannelOption.SO_BACKLOG, 128)

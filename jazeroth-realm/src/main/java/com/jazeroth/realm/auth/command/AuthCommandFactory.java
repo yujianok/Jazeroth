@@ -5,9 +5,6 @@ import org.springframework.stereotype.Component;
 import static com.jazeroth.realm.auth.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
 
 
-/**
- * Created by Jack on 2016/5/8.
- */
 @Component
 public class AuthCommandFactory {
 

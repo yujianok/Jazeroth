@@ -10,9 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by Jack on 2016/5/10.
- */
 @Component
 @Scope("prototype")
 public class AuthCommandDispatcher extends ChannelInboundHandlerAdapter {

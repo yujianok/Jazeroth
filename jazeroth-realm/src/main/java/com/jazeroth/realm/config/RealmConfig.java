@@ -3,9 +3,6 @@ package com.jazeroth.realm.config;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-/**
- * Created by Jack on 2016/5/7.
- */
 @ConfigurationProperties(prefix = RealmConfig.PREFIX)
 public class RealmConfig {
 

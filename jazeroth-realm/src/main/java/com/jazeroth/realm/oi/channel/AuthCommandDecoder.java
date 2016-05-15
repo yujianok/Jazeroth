@@ -14,9 +14,6 @@ import org.springframework.stereotype.Component;
 import java.nio.ByteOrder;
 import java.util.List;
 
-/**
- * Created by Jack on 2016/5/8.
- */
 @Component
 @Scope("prototype")
 public class AuthCommandDecoder extends ByteToMessageDecoder {

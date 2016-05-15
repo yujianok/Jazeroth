@@ -2,13 +2,11 @@ package com.jazeroth.realm.auth.command;
 
 import io.netty.buffer.ByteBuf;
 
-import static com.jazeroth.realm.auth.AuthConstants.AUTH_CHALLENGE_HANDLER;
 import static com.jazeroth.realm.auth.AuthConstants.AUTH_LOGON_CHALLENGE_CODE;
 
-/**
- * Created by Jack on 2016/5/8.
- */
 public class LogonChallenge implements AuthCommand {
+
+    private static final String AUTH_CHALLENGE_HANDLER = "logonChallengeHandler";
 
     private short size;
 
@@ -72,5 +70,58 @@ public class LogonChallenge implements AuthCommand {
         return this;
     }
 
+    public byte[] getGamename() {
+        return gamename;
+    }
 
+    public byte getVersion1() {
+        return version1;
+    }
+
+    public byte getVersion2() {
+        return version2;
+    }
+
+    public byte getVersion3() {
+        return version3;
+    }
+
+    public short getBuild() {
+        return build;
+    }
+
+    public byte[] getPlatform() {
+        return platform;
+    }
+
+    public byte[] getOs() {
+        return os;
+    }
+
+    public byte[] getCountry() {
+        return country;
+    }
+
+    public int getTimezone_bias() {
+        return timezone_bias;
+    }
+
+    public byte[] getIp() {
+        return ip;
+    }
+
+    public String getIpAsString() {
+        return (ip[0] & 0xFF) + "."
+                + (ip[1] & 0xFF) + "."
+                + (ip[2] & 0xFF) + "."
+                + (ip[3] & 0xFF);
+    }
+
+    public byte getUsernameLength() {
+        return usernameLength;
+    }
+
+    public String getUsername() {
+        return username;
+    }
 }
